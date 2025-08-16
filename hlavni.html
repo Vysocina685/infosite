@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Page</title>
+<style>
+    /* Video background */
+    .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    /* Center content */
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+
+    .content {
+        z-index: 1;
+        color: white;
+        text-align: center;
+        max-width: 800px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        transition: transform 0.3s, color 0.3s;
+        cursor: pointer;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    /* Buttons container */
+    .buttons {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Common button style */
+    .btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        background: #8B0000; /* default dark red */
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+    }
+
+    /* Specific hover colors */
+    .youtube:hover {
+        background: linear-gradient(45deg, #FF0000, #FF3333);
+    }
+
+    .instagram:hover {
+        background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    }
+
+    .tiktok:hover {
+        background: linear-gradient(45deg, #69C9D0, #EE1D52);
+    }
+
+    .discord:hover {
+        background: linear-gradient(45deg, #7289DA, #99AAB5);
+    }
+
+    .github:hover {
+        background: linear-gradient(45deg, #333333, #6e5494);
+    }
+</style>
+</head>
+<body>
+    <!-- Video background -->
+    <video class="video-background" autoplay muted loop>
+        <source src="videa/stars.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Centered content -->
+    <div class="content">
+        <h1 id="magicText">Vysocina447</h1>
+        <h2 id="infotext">Info</h2>
+        <p>
+            Welcome to my personal page! 🌟  
+            Here you’ll find all of my social media profiles and platforms where you can connect with me.  
+            Whether you want to stay updated with my latest posts, watch my content, or simply reach out and say hi, this is the right place to start.  
+            Click on the links below and let’s stay connected across all platforms!
+        </p>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <a href="https://tiktok.com/@peekedby" class="btn youtube">Tiktok</a>
+            <a href="https://instagram.com/tobias.3428" class="btn instagram" target="_blank">Instagram</a>
+            <a href="https://cs.namemc.com/profile/Vysocina447.1" class="btn github">NameMC</a>
+        </div>
+    </div>
+
+    <script>
+        // Effects for the main title
+        const magicText = document.getElementById('magicText');
+
+        magicText.addEventListener('mouseenter', () => {
+            magicText.style.color = '#8B0000'; // dark red
+            magicText.style.transform = `rotate(${Math.random() * 20 - 10}deg) scale(1.2)`;
+        });
+
+        magicText.addEventListener('mouseleave', () => {
+            magicText.style.color = 'white';
+            magicText.style.transform = 'rotate(0deg) scale(1)';
+        });
+    </script>
+</body>
+</html>
